@@ -1,0 +1,33 @@
+package com.agile.share.check.Stock;
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	private static int stockInPortfolio = 5;
+	private static String [] stockSymbols = new String [stockInPortfolio];
+	private static int [] stockShares = new int [stockInPortfolio];
+	
+	public static void main(String[] args) {
+	
+		stockSymbols[0] = "BP.L";
+		stockSymbols[1] = "HSBA.L";
+		stockSymbols[2] = "EXPN.L";
+		stockSymbols[3] = "MKS.L";
+		stockSymbols[4] = "SN.L";
+		
+		stockShares[0] = 192;
+		stockShares[1] = 343;
+		stockShares[2] = 258;
+		stockShares[3] = 485;
+		stockShares[4] = 1219;	
+		
+		ShareCheck sharecheck = new ShareCheck();
+		sharecheck.requestStockDetails();
+		sharecheck.printStockDetails();
+		sharecheck.printStockPortfolioValue();
+
+	}
+	
+}

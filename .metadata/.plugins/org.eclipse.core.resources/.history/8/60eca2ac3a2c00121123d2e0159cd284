@@ -1,0 +1,38 @@
+package com.agile.share.check.Stock;
+
+import junit.framework.TestCase;
+
+
+public class ShareCheckTesting extends TestCase {
+       
+	/** testEmptyGame 
+	 * 	
+	 *  If no game is provided, score should be -1 (error)   
+	 */	     
+	ShareCheck sharecheck;
+	
+	public ShareCheckTesting()
+	{
+		String [] stockSymbols  = new String [5];
+		stockSymbols[0] = "BP.L";
+		stockSymbols[1] = "HSBA.L";
+		stockSymbols[2] = "EXPN.L";
+		stockSymbols[3] = "MKS.L";
+		stockSymbols[4] = "SN.L";
+		
+		int [] stockShares = new int [5];
+		stockShares[0] = 192;
+		stockShares[1] = 343;
+		stockShares[2] = 258;
+		stockShares[3] = 485;
+		stockShares[4] = 1219;	
+		
+		sharecheck = new ShareCheck(stockSymbols, stockShares);
+		sharecheck.checkInternet();
+	}
+	
+	public void testEmptyGame() {
+        ShareCheck sharecheck = new ShareCheck();
+        assertEquals(1545056, sharecheck.getStockTotalValue());
+    }
+}
