@@ -27,7 +27,9 @@ public class ShareCheckTesting extends TestCase {
 		sharecheck = new ShareCheck(stockSymbols, stockShares);
 		sharecheck.requestStockDetails();
 		sharecheck.printStockDetails();
+		sharecheck.printTotalShare();
 		sharecheck.printStockPortfolioValue();	
+		
 	}
 	
 	public void testEmptyShares() {
