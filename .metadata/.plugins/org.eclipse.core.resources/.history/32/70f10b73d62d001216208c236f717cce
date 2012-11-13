@@ -9,7 +9,7 @@ public class ShareCheck {
 	private final int stockInPortfolio = 5;
 	private String [] stockSymbols;
 	private int[] stockShares;
-	private StockBean [] stockBeans;
+	private static StockBean [] stockBeans;
 	private static boolean threadRunning = false;
 	public String[] items;
 
@@ -131,20 +131,20 @@ public class ShareCheck {
 		}
 	    
 	    // Getters and Setters
-		public StockBean [] getStockBeans() {
-			return this.stockBeans;
+		public static StockBean [] getStockBeans() {
+			return ShareCheck.stockBeans;
 		}
 
 		public void setStockBeans(StockBean [] stockBeanArray) {
-			this.stockBeans = stockBeanArray;
+			ShareCheck.stockBeans = stockBeanArray;
 		}
 		
-	    public float requestStockPrice(StockBean stockBean)
+	    public static float requestStockPrice(StockBean stockBean)
 		{
 			return (stockBean.price/100);
 		}
 	    
-	    public float requestStockPriceFromPosition(int position)
+	    public static float requestStockPriceFromPosition(int position)
 	    {
 	    	return (getStockBeans()[position].price/100);
 	    }

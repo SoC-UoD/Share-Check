@@ -100,7 +100,7 @@ public class ShareCheck {
 			System.out.println("<------------------------->");
 			for(int i =0;i<getStockSymbols().length;i++)
 			{
-				System.out.println("Stock name = "+ getStockSymbols()[i] +" \tPrice = £"+requestStockPrice(stockBeans[i]));
+				System.out.println("Stock name = "+ getStockSymbols()[i] +" \tPrice = "+requestStockPrice(stockBeans[i]));
 			}
 		}
 		
@@ -111,7 +111,7 @@ public class ShareCheck {
 			System.out.println("<------------------------->");
 			for(int i =0;i<getStockSymbols().length;i++)
 			{
-				System.out.println("Stock name = "+ getStockSymbols()[i] +" \tPrice = £"+requestStockPrice(stockBeans [i])* stockShares[i]);
+				System.out.println("Stock name = "+ getStockSymbols()[i] +" \tPrice = "+requestStockPrice(stockBeans [i])* stockShares[i]);
 			}
 		}
 		
@@ -123,11 +123,14 @@ public class ShareCheck {
 			System.out.println("Total Portfolio Value : \t£"+getStockPortfolioTotalValue());
 			System.out.println("Total portfolio Value Rounded : £"+Math.round(getStockPortfolioTotalValue()));
 			System.out.println("Total portfolio Big Decimal   : "+convertFloatToBigDecimal(Math.round(getStockPortfolioTotalValue())));
+			
 		}
 		
 		public float getTotalStockValueForShare(int position)
 		{
 			return requestStockPrice(stockBeans [position])* stockShares[position];
+			
+			
 		}
 	    
 	    // Getters and Setters
@@ -139,15 +142,10 @@ public class ShareCheck {
 			this.stockBeans = stockBeanArray;
 		}
 		
-	    public float requestStockPrice(StockBean stockBean)
+	    public static float requestStockPrice(StockBean stockBean)
 		{
 			return (stockBean.price/100);
 		}
-	    
-	    public float requestStockPriceFromPosition(int position)
-	    {
-	    	return (getStockBeans()[position].price/100);
-	    }
 	    
 		public void requestStockDetails()
 		{
@@ -165,7 +163,8 @@ public class ShareCheck {
 			{
 				total += (requestStockPrice(stockBeans [i])* stockShares[i]);
 						
-			}	
+			}
+					
 			return total;
 		}
 		

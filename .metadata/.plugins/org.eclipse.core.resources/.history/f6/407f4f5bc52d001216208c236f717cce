@@ -131,7 +131,7 @@ public class ShareCheck {
 		}
 	    
 	    // Getters and Setters
-		public StockBean [] getStockBeans() {
+		public static StockBean [] getStockBeans() {
 			return this.stockBeans;
 		}
 
@@ -139,12 +139,12 @@ public class ShareCheck {
 			this.stockBeans = stockBeanArray;
 		}
 		
-	    public float requestStockPrice(StockBean stockBean)
+	    public static float requestStockPrice(StockBean stockBean)
 		{
 			return (stockBean.price/100);
 		}
 	    
-	    public float requestStockPriceFromPosition(int position)
+	    public static float requestStockPriceFromPositoin(int position)
 	    {
 	    	return (getStockBeans()[position].price/100);
 	    }

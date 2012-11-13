@@ -7,10 +7,6 @@ import junit.framework.TestCase;
 public class ShareCheckTesting extends TestCase {
          
 	private ShareCheck sharecheck;
-	private float testTotalStockValue = 15549.133f;
-	private String testBigDecimalTotal = "£15,549";
-	private float testBPTotalShareValue = 812.9895f;
-	private String testBPTotalRoundedShareToBD="£813";
 	
 	public ShareCheckTesting()
 	{
@@ -90,6 +86,9 @@ public class ShareCheckTesting extends TestCase {
         assertEquals(newDate.updateDateString(), sharecheck.UpdateTime());
 	}
 	
+	float testTotalStockValue = 15541.627f;
+	String testBigDecimalTotal = "£15,542";
+	
 	public void testTotalStockValue()
 	{
 		assertEquals(testTotalStockValue, sharecheck.getStockPortfolioTotalValue(),0);	
@@ -102,12 +101,12 @@ public class ShareCheckTesting extends TestCase {
 	
 	public void testTotalShareValue()
 	{
-		assertEquals(testBPTotalShareValue,sharecheck.getTotalStockValueForShare(0),0);
+		assertEquals(82041.59375,sharecheck.getTotalStockValueForShare(0),0);
 	}
 	
 	public void testTotalShareValueToBigDecimal()
 	{
-		assertEquals(testBPTotalRoundedShareToBD,sharecheck.convertFloatToBigDecimal(sharecheck.getTotalStockValueForShare(0)));
+		assertEquals("£82,042",sharecheck.convertFloatToBigDecimal(sharecheck.getTotalStockValueForShare(0)));
 	}
 	
 	

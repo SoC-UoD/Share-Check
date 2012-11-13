@@ -51,6 +51,7 @@ public class ShareCheckTesting extends TestCase {
 		assertEquals(0, nullShareCheck.getStockSymbols().length);   
     }
 	
+	@SuppressWarnings("static-access")
 	public void testEmptyStockBeans() {
 		ShareCheck nullShareCheck = new ShareCheck();
 		assertEquals(0, nullShareCheck.getStockBeans().length);   

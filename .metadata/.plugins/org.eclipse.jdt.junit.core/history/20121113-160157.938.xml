@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="ShareCheckTesting" project="ShareCheck" tests="15" started="15" failures="4" errors="0" ignored="0">
+  <testsuite name="ShareCheckTesting.ShareCheckTesting" time="0.01">
+    <testcase name="warning" classname="junit.framework.TestSuite.1" time="0.0">
+      <failure>junit.framework.AssertionFailedError: Exception in constructor: testTotalStockValue (java.lang.NullPointerException
+	at com.agile.share.check.Stock.ShareCheck.requestStockPrice(ShareCheck.java:147)
+	at com.agile.share.check.Stock.ShareCheck.printStockDetails(ShareCheck.java:103)
+	at ShareCheckTesting.ShareCheckTesting.&lt;init&gt;(ShareCheckTesting.java:29)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at junit.framework.TestSuite.createTest(TestSuite.java:54)
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:280)
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:140)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestLoader.getTest(JUnit3TestLoader.java:102)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestLoader.loadTests(JUnit3TestLoader.java:59)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:452)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+)
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.TestSuite$1.runTest(TestSuite.java:90)
+	at junit.framework.TestCase.runBare(TestCase.java:130)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:120)
+	at junit.framework.TestSuite.runTest(TestSuite.java:230)
+	at junit.framework.TestSuite.run(TestSuite.java:225)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+    </testcase>
+    <testcase name="testEmptyShares" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testEmptyItems" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testEmptyStockSymbols" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testEmptyStockBeans" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testIndividualStockSymbol" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testNumberOfShares" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testIndividualShareName" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testNumberOfSharesNames" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testNumberOfStockSymbols" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testIndividualStockShares" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testDateTime" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testToBigDecimal" classname="ShareCheckTesting.ShareCheckTesting" time="0.01">
+      <failure>
+        <expected>£15,510</expected>
+        <actual>£15,513</actual>junit.framework.ComparisonFailure: expected:&lt;£15,51[0]&gt; but was:&lt;£15,51[3]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at ShareCheckTesting.ShareCheckTesting.testToBigDecimal(ShareCheckTesting.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at junit.framework.TestCase.runTest(TestCase.java:164)
+	at junit.framework.TestCase.runBare(TestCase.java:130)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:120)
+	at junit.framework.TestSuite.runTest(TestSuite.java:230)
+	at junit.framework.TestSuite.run(TestSuite.java:225)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+    </testcase>
+    <testcase name="testTotalShareValue" classname="ShareCheckTesting.ShareCheckTesting" time="0.0">
+      <failure>junit.framework.AssertionFailedError: expected:&lt;82041.59375&gt; but was:&lt;816.47998046875&gt;
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:280)
+	at junit.framework.Assert.assertEquals(Assert.java:98)
+	at junit.framework.Assert.assertEquals(Assert.java:105)
+	at ShareCheckTesting.ShareCheckTesting.testTotalShareValue(ShareCheckTesting.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at junit.framework.TestCase.runTest(TestCase.java:164)
+	at junit.framework.TestCase.runBare(TestCase.java:130)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:120)
+	at junit.framework.TestSuite.runTest(TestSuite.java:230)
+	at junit.framework.TestSuite.run(TestSuite.java:225)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+    </testcase>
+    <testcase name="testTotalShareValueToBigDecimal" classname="ShareCheckTesting.ShareCheckTesting" time="0.0">
+      <failure>
+        <expected>£82,042</expected>
+        <actual>£816</actual>junit.framework.ComparisonFailure: expected:&lt;£8[2,042]&gt; but was:&lt;£8[16]&gt;
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at ShareCheckTesting.ShareCheckTesting.testTotalShareValueToBigDecimal(ShareCheckTesting.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at junit.framework.TestCase.runTest(TestCase.java:164)
+	at junit.framework.TestCase.runBare(TestCase.java:130)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:120)
+	at junit.framework.TestSuite.runTest(TestSuite.java:230)
+	at junit.framework.TestSuite.run(TestSuite.java:225)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+    </testcase>
+  </testsuite>
+</testrun>
