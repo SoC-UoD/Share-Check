@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="22" version="2.0">
+<workbench progressCount="25" version="2.0">
 <workbenchAdvisor/>
 <window height="1029" maximized="true" width="960" x="960" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -11,13 +11,13 @@
 <coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="128" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="147" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="82" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="82" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="214" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -29,22 +29,40 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ShareCheck.java" partName="ShareCheck.java" path="C:/Users/Kyle/ShareCheckTests/ShareCheck/src/com/agile/share/check/Stock/ShareCheck.java" title="ShareCheck.java" tooltip="ShareCheck/src/com/agile/share/check/Stock/ShareCheck.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ShareCheck/src/com/agile/share/check/Stock/ShareCheck.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="395" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4377" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ShareCheckTesting.java" partName="ShareCheckTesting.java" path="C:/Users/Kyle/ShareCheckTests/ShareCheck/src/ShareCheckTesting/ShareCheckTesting.java" title="ShareCheckTesting.java" tooltip="ShareCheck/src/ShareCheckTesting/ShareCheckTesting.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ShareCheck/src/ShareCheckTesting/ShareCheckTesting.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="992" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="511" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StockBean.java" partName="StockBean.java" path="C:/Users/Kyle/ShareCheckTests/ShareCheck/src/com/agile/share/check/Stock/StockBean.java" title="StockBean.java" tooltip="ShareCheck/src/com/agile/share/check/Stock/StockBean.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ShareCheck/src/com/agile/share/check/Stock/StockBean.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="791" selectionTopPixel="181"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StockTickerDAO.java" partName="StockTickerDAO.java" path="C:/Users/Kyle/ShareCheckTests/ShareCheck/src/com/agile/share/check/Stock/StockTickerDAO.java" title="StockTickerDAO.java" tooltip="ShareCheck/src/com/agile/share/check/Stock/StockTickerDAO.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ShareCheck/src/com/agile/share/check/Stock/StockTickerDAO.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2566" selectionTopPixel="601"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DateString.java" partName="DateString.java" path="C:/Users/Kyle/ShareCheckTests/ShareCheck/src/com/agile/share/check/Stock/DateString.java" title="DateString.java" tooltip="ShareCheck/src/com/agile/share/check/Stock/DateString.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ShareCheck/src/com/agile/share/check/Stock/DateString.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.jdt.junit.ResultView" partName="JUnit">
-<viewState failuresOnly="false" layout="1" orientation="2" ratio="668" scroll="false" time="true"/>
+<viewState failuresOnly="false" layout="1" orientation="2" ratio="627" scroll="false" time="true"/>
+</view>
+<view id="jp.co.dgic.eclipse.jdt.coverage.CoverageReportView" partName="djUnit Coverage Report">
+<viewState/>
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
@@ -92,15 +110,29 @@
 </customFilters>
 </viewState>
 </view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
+<columnWidths org.eclipse.ui.ide.completionField="45" org.eclipse.ui.ide.descriptionField="454" org.eclipse.ui.ide.locationField="94" org.eclipse.ui.ide.markerType="139" org.eclipse.ui.ide.pathField="184" org.eclipse.ui.ide.priorityField="20" org.eclipse.ui.ide.resourceField="139"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.completionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.priorityField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.descriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
-<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration">
+<viewState/>
+</view>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc">
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -157,11 +189,13 @@
 <view id="org.eclipse.jdt.ui.SourceView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="jp.co.dgic.eclipse.jdt.coverage.CoverageReportView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
 <info folder="true" part="left">
-<folder activePageID="org.eclipse.jdt.junit.ResultView" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
 <page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
 <page content="org.eclipse.jdt.junit.ResultView" label="JUnit"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
@@ -173,16 +207,15 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@12462631" ratio="0.749499" ratioLeft="748" ratioRight="250" relationship="2" relative="left">
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="left">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.15557884" ratioLeft="297" ratioRight="1612" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.75950783" ratioLeft="679" ratioRight="215" relationship="4" relative="org.eclipse.ui.editorss">
+<info part="org.eclipse.ui.editorss" ratio="0.16343635" ratioLeft="312" ratioRight="1597" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.74916387" ratioLeft="672" ratioRight="225" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
@@ -199,7 +232,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="right" ratio="0.80671227" ratioLeft="1298" ratioRight="311" relationship="2" relative="org.eclipse.ui.editorss">
+<info folder="true" part="right" ratio="0.7496513" ratioLeft="1075" ratioRight="359" relationship="2" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
@@ -210,6 +243,16 @@
 </folder>
 </info>
 </mainWindow>
+<detachedWindow height="1006" width="1193" x="1925" y="4">
+<folder activePageID="jp.co.dgic.eclipse.jdt.coverage.CoverageReportView" appearance="2" expanded="2">
+<page content="jp.co.dgic.eclipse.jdt.coverage.CoverageReportView" label="djUnit Coverage Report"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</detachedWindow>
 </layout>
 </perspective>
 </perspectives>
@@ -218,156 +261,158 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ShareCheck/src/ShareCheckTesting/ShareCheckTesting.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ShareCheck/src/com/agile/share/check/Stock/ShareCheck.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ShareCheck/src/com/agile/share/check/Stock/StockBean.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ShareCheck/src/com/agile/share/check/Stock/StockTickerDAO.java"/>
 </editors>
-<item historyLabel="ShareCheck.java" index="1">
-<position info="not_deleted" x="2066" y="0"/>
+<item historyLabel="ShareCheckTesting.java" index="0">
+<position info="not_deleted" x="4124" y="0"/>
 </item>
 <item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="1985" y="0"/>
-</item>
-<item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="2121" y="0"/>
-</item>
-<item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="2126" y="0"/>
+<position info="not_deleted" x="4199" y="0"/>
 </item>
 <item historyLabel="ShareCheck.java" index="1">
-<position info="not_deleted" x="3737" y="27"/>
-</item>
-<item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="2126" y="0"/>
-</item>
-<item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="2364" y="0"/>
+<position info="not_deleted" x="3655" y="0"/>
 </item>
 <item historyLabel="ShareCheck.java" index="1">
-<position info="not_deleted" x="3794" y="0"/>
+<position info="not_deleted" x="4226" y="0"/>
 </item>
-<item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="2364" y="0"/>
-</item>
-<item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="2166" y="26"/>
+<item historyLabel="StockTickerDAO.java" index="3">
+<position info="not_deleted" x="2534" y="34"/>
 </item>
 <item historyLabel="ShareCheck.java" index="1">
-<position info="not_deleted" x="3794" y="0"/>
+<position info="not_deleted" x="4596" y="0"/>
 </item>
 <item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="2815" y="0"/>
+<position info="not_deleted" x="4199" y="0"/>
 </item>
 <item historyLabel="ShareCheck.java" index="1">
-<position info="not_deleted" x="2878" y="0"/>
+<position info="not_deleted" x="373" y="0"/>
 </item>
 <item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="2815" y="0"/>
+<position info="not_deleted" x="4199" y="0"/>
 </item>
 <item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="2253" y="115"/>
+<position info="not_deleted" x="5543" y="0"/>
 </item>
 <item historyLabel="ShareCheck.java" index="1">
-<position info="not_deleted" x="2191" y="24"/>
+<position info="not_deleted" x="373" y="0"/>
 </item>
 <item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="2517" y="0"/>
+<position info="not_deleted" x="5543" y="0"/>
 </item>
 <item historyLabel="ShareCheck.java" index="1">
-<position info="not_deleted" x="2191" y="24"/>
+<position info="not_deleted" x="336" y="0"/>
 </item>
 <item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="2517" y="0"/>
+<position info="not_deleted" x="5543" y="0"/>
 </item>
 <item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="523" y="0"/>
+<position info="not_deleted" x="5545" y="0"/>
+</item>
+<item historyLabel="ShareCheckTesting.java" index="0">
+<position info="not_deleted" x="5613" y="0"/>
+</item>
+<item historyLabel="ShareCheckTesting.java" index="0">
+<position info="not_deleted" x="5099" y="0"/>
 </item>
 <item historyLabel="ShareCheck.java" index="1">
-<position info="not_deleted" x="2583" y="0"/>
-</item>
-<item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="1766" y="5"/>
-</item>
-<item historyLabel="ShareCheck.java" index="1">
-<position info="not_deleted" x="2583" y="0"/>
-</item>
-<item historyLabel="ShareCheck.java" index="1">
-<position info="not_deleted" x="3067" y="26"/>
-</item>
-<item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="1766" y="5"/>
-</item>
-<item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="2559" y="0"/>
-</item>
-<item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="2824" y="0"/>
-</item>
-<item historyLabel="ShareCheck.java" index="1">
-<position info="not_deleted" x="3067" y="26"/>
-</item>
-<item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="2824" y="0"/>
-</item>
-<item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="2691" y="0"/>
-</item>
-<item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="2812" y="0"/>
-</item>
-<item historyLabel="ShareCheck.java" index="1">
-<position info="not_deleted" x="3067" y="26"/>
-</item>
-<item historyLabel="ShareCheck.java" index="1">
-<position info="not_deleted" x="760" y="0"/>
-</item>
-<item historyLabel="ShareCheck.java" index="1">
-<position info="not_deleted" x="760" y="0"/>
-</item>
-<item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="2812" y="0"/>
-</item>
-<item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="1134" y="0"/>
-</item>
-<item historyLabel="ShareCheck.java" index="1">
-<position info="not_deleted" x="525" y="0"/>
-</item>
-<item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="1134" y="0"/>
-</item>
-<item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="1125" y="0"/>
-</item>
-<item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="1096" y="0"/>
+<position info="not_deleted" x="4688" y="0"/>
 </item>
 <item historyLabel="ShareCheckTesting.java" index="0">
 <position/>
 </item>
-<item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="1186" y="0"/>
-</item>
 <item historyLabel="ShareCheck.java" index="1">
-<position info="not_deleted" x="525" y="0"/>
-</item>
-<item historyLabel="ShareCheck.java" index="1">
-<position info="not_deleted" x="3400" y="0"/>
+<position info="not_deleted" x="4429" y="0"/>
 </item>
 <item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="1134" y="0"/>
+<position info="not_deleted" x="5723" y="0"/>
 </item>
 <item historyLabel="ShareCheck.java" index="1">
-<position info="not_deleted" x="3400" y="0"/>
-</item>
-<item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="1096" y="0"/>
+<position info="not_deleted" x="4429" y="0"/>
 </item>
 <item historyLabel="ShareCheck.java" index="1">
-<position info="not_deleted" x="2583" y="0"/>
+<position info="not_deleted" x="812" y="0"/>
+</item>
+<item historyLabel="ShareCheck.java" index="1">
+<position info="not_deleted" x="157" y="0"/>
 </item>
 <item historyLabel="ShareCheckTesting.java" index="0">
-<position info="not_deleted" x="992" y="0"/>
+<position info="not_deleted" x="5552" y="0"/>
+</item>
+<item historyLabel="ShareCheck.java" index="1">
+<position info="not_deleted" x="157" y="0"/>
+</item>
+<item historyLabel="StockBean.java" index="2">
+<position info="not_deleted" x="398" y="0"/>
+</item>
+<item historyLabel="ShareCheck.java" index="1">
+<position info="not_deleted" x="1763" y="0"/>
+</item>
+<item historyLabel="ShareCheckTesting.java" index="0">
+<position info="not_deleted" x="5631" y="0"/>
+</item>
+<item historyLabel="StockBean.java" index="2">
+<position/>
+</item>
+<item historyLabel="StockTickerDAO.java" index="3">
+<position info="not_deleted" x="2492" y="0"/>
+</item>
+<item historyLabel="StockBean.java" index="2">
+<position/>
+</item>
+<item historyLabel="ShareCheckTesting.java" index="0">
+<position info="not_deleted" x="5631" y="0"/>
+</item>
+<item historyLabel="StockBean.java" index="2">
+<position info="not_deleted" x="567" y="0"/>
+</item>
+<item historyLabel="ShareCheckTesting.java" index="0">
+<position info="not_deleted" x="5631" y="0"/>
+</item>
+<item historyLabel="ShareCheck.java" index="1">
+<position info="not_deleted" x="812" y="0"/>
+</item>
+<item historyLabel="StockBean.java" index="2">
+<position info="not_deleted" x="679" y="0"/>
+</item>
+<item historyLabel="StockTickerDAO.java" index="3">
+<position info="not_deleted" x="1084" y="0"/>
+</item>
+<item historyLabel="ShareCheckTesting.java" index="0">
+<position info="not_deleted" x="5631" y="0"/>
+</item>
+<item historyLabel="StockTickerDAO.java" index="3">
+<position info="not_deleted" x="2566" y="0"/>
+</item>
+<item historyLabel="StockBean.java" index="2">
+<position info="not_deleted" x="791" y="0"/>
+</item>
+<item historyLabel="ShareCheck.java" index="1">
+<position info="not_deleted" x="857" y="6"/>
+</item>
+<item historyLabel="ShareCheck.java" index="1">
+<position info="not_deleted" x="812" y="0"/>
+</item>
+<item historyLabel="ShareCheckTesting.java" index="0">
+<position info="not_deleted" x="5631" y="0"/>
+</item>
+<item historyLabel="ShareCheck.java" index="1">
+<position info="not_deleted" x="812" y="0"/>
+</item>
+<item historyLabel="ShareCheckTesting.java" index="0">
+<position info="not_deleted" x="5631" y="0"/>
+</item>
+<item historyLabel="ShareCheckTesting.java" index="0">
+<position info="not_deleted" x="626" y="0"/>
+</item>
+<item historyLabel="ShareCheck.java" index="1">
+<position info="not_deleted" x="519" y="0"/>
+</item>
+<item historyLabel="ShareCheckTesting.java" index="0">
+<position info="not_deleted" x="511" y="0"/>
 </item>
 <item active="true" historyLabel="ShareCheck.java" index="1">
-<position info="not_deleted" x="2583" y="0"/>
+<position info="not_deleted" x="519" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -386,6 +431,12 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DateString.java" tooltip="ShareCheck/src/com/agile/share/check/Stock/DateString.java">
+<persistable path="/ShareCheck/src/com/agile/share/check/Stock/DateString.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StockTickerDAO.java" tooltip="ShareCheck/src/com/agile/share/check/Stock/StockTickerDAO.java">
+<persistable path="/ShareCheck/src/com/agile/share/check/Stock/StockTickerDAO.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StockBean.java" tooltip="ShareCheck/src/com/agile/share/check/Stock/StockBean.java">
 <persistable path="/ShareCheck/src/com/agile/share/check/Stock/StockBean.java"/>
 </file>

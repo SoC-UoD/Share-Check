@@ -1,0 +1,196 @@
+package ShareCheckTesting;
+
+import com.agile.share.check.Stock.DateString;
+import com.agile.share.check.Stock.ShareCheck;
+import junit.framework.TestCase;
+
+public class ShareCheckTesting extends TestCase {
+         
+	private ShareCheck sharecheck;
+	private float testTotalStockValue = 15549.133f;
+	private String testBigDecimalTotal = "£15,549";
+	private float testBPTotalShareValue = 812.9895f;
+	private String testBPTotalRoundedShareToBD="£813";
+	
+	public ShareCheckTesting()
+	{
+		String [] stockSymbols  = new String [5];
+		int [] stockShares = new int [5];
+		stockSymbols[0] = "BP.L";
+		stockSymbols[1] = "HSBA.L";
+		stockSymbols[2] = "EXPN.L";
+		stockSymbols[3] = "MKS.L";
+		stockSymbols[4] = "SN.L";
+		
+		stockShares[0] = 192;
+		stockShares[1] = 343;
+		stockShares[2] = 258;
+		stockShares[3] = 485;
+		stockShares[4] = 1219;	
+		
+		sharecheck = new ShareCheck(stockSymbols, stockShares);
+		sharecheck.requestStockDetails();
+		sharecheck.printStockDetails();
+		sharecheck.printTotalShare();
+		sharecheck.printStockPortfolioValue();	
+		
+	}
+	public void testNegativeShares() {
+		assert(-1!=sharecheck.getStockShares().length);
+    }
+	
+	public void testNegativeItems() {
+		assert(-1!=sharecheck.getItems().length);
+    }
+	
+	public void testNegativeStockSymbols() {
+		assert(-1!=sharecheck.getStockSymbols().length);	
+    }
+	
+	public void testNegativeStockBeans() {
+		assert(-1!=sharecheck.getStockBeans().length);  
+    }
+	
+	public void testEmptyShares() {
+		ShareCheck nullShareCheck = new ShareCheck();
+		assertEquals(0, nullShareCheck.getStockShares().length);   
+    }
+	
+	public void testEmptyItems() {
+		ShareCheck nullShareCheck = new ShareCheck(); 
+		assertEquals(0, nullShareCheck.items.length);
+    }
+	
+	public void testEmptyStockSymbols() {
+		ShareCheck nullShareCheck = new ShareCheck();
+		assertEquals(0, nullShareCheck.getStockSymbols().length);   
+    }
+	
+	public void testEmptyStockBeans() {
+		ShareCheck nullShareCheck = new ShareCheck();
+		assertEquals(0, nullShareCheck.getStockBeans().length);   
+    }
+	
+	public void testEmptyStockSymbol()
+	{
+		assert(!("".equals(sharecheck.getStockSymbol(0))));	
+	}
+	
+	public void testIndividualStockSymbol()
+	{
+		assertEquals("BP.L", sharecheck.getStockSymbol(0));	
+	}
+	
+	public void testNumberOfShares() {
+        assertEquals(5, sharecheck.getStockShares().length);  
+    }
+	
+	public void testIndividualShareName()
+	{
+		assertEquals("BP Amoco PLC",sharecheck.getItems()[0]);
+	}
+	
+	public void testEmptyShareName()
+	{
+		assert(!("".equals(sharecheck.getItems()[0])));	
+	}
+	
+	public void testNumberOfSharesNames()
+	{
+		assertEquals(5, sharecheck.items.length); 
+	}
+	
+	public void testNumberOfStockSymbols(){
+		assertEquals(5, sharecheck.getStockSymbols().length);  
+	}
+	
+	public void testNegativeStockShare()
+	{
+		assert(sharecheck.getStockShare(0)<0);
+	}
+	
+	public void testNotZeroStockShare()
+	{
+		assert(sharecheck.getStockShare(0)>=0);
+	}
+	
+	public void testIndividualStockShares()
+	{
+		assertEquals(192, sharecheck.getStockShare(0));	
+	}
+	
+	public void testNonEmptyDateTime()
+	{
+        assert(!(""== sharecheck.UpdateTime()));
+	}
+	
+	public void testDateTime()
+	{
+		DateString newDate = new DateString();
+        assertEquals(newDate.updateDateString(), sharecheck.UpdateTime());
+	}
+	
+	public void testNonNegativeTotalStockValue()
+	{
+		assert(sharecheck.getStockPortfolioTotalValue()>=0);
+	}
+	
+	public void testNegativeTotalStockValue()
+	{
+		assert(!(sharecheck.getStockPortfolioTotalValue()<0));
+	}
+	
+	public void testTotalStockValue()
+	{
+		assertEquals(testTotalStockValue, sharecheck.getStockPortfolioTotalValue(),0);	
+	}
+	
+	public void testEmptyBigDecimal()
+	{
+		assert(!("".equals(sharecheck.convertFloatToBigDecimal(sharecheck.getStockPortfolioTotalValue()))));
+	}
+	
+	public void testToBigDecimal()
+	{
+		assertEquals(testBigDecimalTotal,sharecheck.convertFloatToBigDecimal(sharecheck.getStockPortfolioTotalValue()));
+	}
+	
+	public void testZeroShareValue()
+	{
+		assert(sharecheck.getTotalStockValueForShare(0)>=0);
+	}
+	
+	public void testNegativeShareValue()
+	{
+		assert(!(sharecheck.getTotalStockValueForShare(0)<0));
+	}
+	
+	public void testTotalShareValue()
+	{
+		assertEquals(testBPTotalShareValue,sharecheck.getTotalStockValueForShare(0),0);
+	}
+	
+	public void testUpperLimitShareValue()
+	{
+		assert(sharecheck.getTotalStockValueForShare(0)<=500);
+	}
+	
+	public void testBoundariesShareValue()
+	{
+		assert((sharecheck.getTotalStockValueForShare(0)>0)&&(sharecheck.getTotalStockValueForShare(0)<=500));
+	}
+	
+	public void testTotalShareValueToBigDecimal()
+	{
+		assertEquals(testBPTotalRoundedShareToBD,sharecheck.convertFloatToBigDecimal(sharecheck.getTotalStockValueForShare(0)));
+	}
+	
+	
+	
+}
+	
+	
+	
+
+	
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="ShareCheckTesting (1)" project="ShareCheck" tests="35" started="35" failures="0" errors="0" ignored="0">
+  <testsuite name="ShareCheckTesting.ShareCheckTesting" time="0.0">
+    <testcase name="testTotalStockValue" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testInternetConnection" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testNegativeShares" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testNegativeItems" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testNegativeStockSymbols" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testNegativeStockBeans" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testEmptyShares" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testEmptyItems" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testEmptyStockSymbols" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testEmptyStockBeans" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testEmptyStockSymbol" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testIndividualStockSymbol" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testNumberOfShares" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testIndividualShareName" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testEmptyShareName" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testNumberOfSharesNames" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testNumberOfStockSymbols" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testNegativeStockShare" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testNotZeroStockShare" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testIndividualStockShares" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testNonEmptyDateTime" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testDateTime" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testNonNegativeTotalStockValue" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testNegativeTotalStockValue" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testStockPriceFromPosition" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testEmptyBigDecimal" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testToBigDecimal" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testZeroShareValue" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testNegativeShareValue" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testTotalShareValue" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testUpperLimitShareValue" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testBoundariesShareValue" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testTotalShareValueToBigDecimal" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testBooleanConnectionAvailable" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+    <testcase name="testBooleanConnectionAvailableAfterConnection" classname="ShareCheckTesting.ShareCheckTesting" time="0.0"/>
+  </testsuite>
+</testrun>

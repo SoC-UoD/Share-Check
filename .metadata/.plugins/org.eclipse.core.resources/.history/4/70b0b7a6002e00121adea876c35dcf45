@@ -1,0 +1,262 @@
+package com.agile.share.check.Stock;
+
+import java.math.BigDecimal;
+import java.text.NumberFormat;
+import java.util.Locale;
+
+public class ShareCheck {
+
+	private final int stockInPortfolio = 5;
+	private String[] stockSymbols;
+	private int[] stockShares;
+	private StockBean[] stockBeans;
+	private static boolean threadRunning = false;
+	public String[] items;
+	public  boolean internetAvailable = false;
+
+	public ShareCheck() {
+		stockSymbols = new String[0];
+		stockShares = new int[0];
+		stockBeans = new StockBean[0];
+		items = new String[0];
+	}
+
+	public Thread thread = new Thread() {
+		@Override
+		public void run() {
+			try {
+				for (int i = 0; i < getStockSymbols().length; i++) {
+					getStockBeans()[i] = StockTickerDAO.getInstance()
+							.getStockPrice(getStockSymbols()[i]);
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				threadRunning = true;
+			}
+		}
+	};
+
+	public void checkInternet() {
+		internetAvailable = isInternetOn();
+
+		if (internetAvailable) {
+			DateString newDate = new DateString();
+			System.out.println(newDate.updateDateString());
+
+			if (!threadRunning) {
+				threadRunning = true;
+				thread.start();
+			}
+		} else {
+			System.out.println("Unavailable");
+		}
+	}
+
+	public boolean isInternetOn() {
+		return true;
+	}
+
+	public String UpdateTime() {
+		DateString newDate = new DateString();
+
+		System.out.println(newDate.updateDateString());
+		return newDate.updateDateString();
+	}
+
+	public String convertFloatToBigDecimal(float inputValue) {
+		BigDecimal totalShareValue = new BigDecimal(inputValue);
+		NumberFormat n = NumberFormat.getCurrencyInstance(Locale.UK);
+		String roundedString = n.format(totalShareValue.setScale(0,
+				BigDecimal.ROUND_HALF_EVEN));
+		roundedString = roundedString.substring(0, roundedString.length() - 3);
+		return roundedString;
+	}
+
+	public void printStockDetails() {
+		System.out.println("<------------------------->");
+		System.out.println("Share Value");
+		System.out.println("<------------------------->");
+		for (int i = 0; i < getStockSymbols().length; i++) {
+			System.out.println("Stock name = " + getStockSymbols()[i]
+					+ " \tPrice = £" + requestStockPrice(stockBeans[i]));
+		}
+	}
+
+	public void printTotalShare() {
+		System.out.println("<------------------------->");
+		System.out.println("Total Share Value");
+		System.out.println("<------------------------->");
+		for (int i = 0; i < getStockSymbols().length; i++) {
+			System.out.println("Stock name = " + getStockSymbols()[i]
+					+ " \tPrice = £" + requestStockPrice(stockBeans[i])
+					* stockShares[i]);
+		}
+	}
+
+	public void printStockPortfolioValue() {
+		System.out.println("<------------------------->");
+		System.out.println("Total Portfolio Value");
+		System.out.println("<------------------------->");
+		System.out.println("Total Portfolio Value : \t£"
+				+ getStockPortfolioTotalValue());
+		System.out.println("Total portfolio Value Rounded : £"
+				+ Math.round(getStockPortfolioTotalValue()));
+		System.out.println("Total portfolio Big Decimal   : "
+				+ convertFloatToBigDecimal(Math
+						.round(getStockPortfolioTotalValue())));
+	}
+
+	public float getTotalStockValueForShare(int position) {
+		return requestStockPrice(stockBeans[position]) * stockShares[position];
+	}
+
+	// Getters and Setters
+	public StockBean[] getStockBeans() {
+		return this.stockBeans;
+	}
+
+	public void setStockBeans(StockBean[] stockBeanArray) {
+		this.stockBeans = stockBeanArray;
+	}
+
+	public float requestStockPrice(StockBean stockBean) {
+		return (stockBean.price / 100);
+	}
+
+	public float requestStockPriceFromPosition(int position) {
+		return (getStockBeans()[position].price / 100);
+	}
+
+	public void requestStockDetails() {
+		for (int i = 0; i < getStockSymbols().length; i++) {
+			stockBeans[i] = StockTickerDAO.getInstance().getStockPrice(
+					getStockSymbols()[i]);
+		}
+	}
+
+	public float getStockPortfolioTotalValue() {
+		float total = 0.0f;
+
+		for (int i = 0; i < getStockSymbols().length; i++) {
+			total += (requestStockPrice(stockBeans[i]) * stockShares[i]);
+
+		}
+		return total;
+	}
+
+	public int getStockShare(int position) {
+		return stockShares[position];
+	}
+
+	public String getStockSymbol(int position) {
+		return stockSymbols[position];
+	}
+
+	public String[] getStockSymbols() {
+		return stockSymbols;
+	}
+
+	public int[] getStockShares() {
+		return stockShares;
+	}
+
+	public String[] getItems() {
+		return items;
+	}
+
+	public void setStockSymbols(String[] stockSymbols) {
+		this.stockSymbols = stockSymbols;
+	}
+
+	public void setStockShares(int[] stockShares) {
+		this.stockShares = stockShares;
+	}
+
+	public void setItems(String[] items) {
+		this.items = items;
+	}
+	
+//User Story C test cases - Pair Programmed by Darren and Chris - last updated 14 / 11 / 2012
+	
+	//Our Invalid Unit Tests
+	public void testInvalidShareValueLower()  // Testing the invalid negative input "-1" for Total Share Value
+	{
+		for( int i =0; i < 5 ; i++)
+		{
+			assertFalse("Invalid, Total share value less than zero",(sharecheck.requestStockPrice(sharecheck.getStockBeans()[i]) * sharecheck.getStockShares()[i]) < 0);
+		}
+	}
+
+	public void testInvalidShareValueUpper() // Testing the invalid input "5,000,001" for Total Share Value
+	{
+		for( int i =0; i < 5 ; i++)
+		{
+			assertFalse("Invalid, Total share value exceeds five million",(sharecheck.requestStockPrice(sharecheck.getStockBeans()[i]) * sharecheck.getStockShares()[i]) > 5000000);
+		}
+	}
+
+	public void testInvalidDifferntSharesLower() // Testing the invalid negative input "-1" for Number of Different Shares in Portfolio
+	{
+		assert(-1 != sharecheck.getStockSymbols().length);
+	}
+
+	public void testInvalidDifferntSharesUpper() // Testing the invalid input "6" for Number of Different Shares in Portfolio
+	{
+		assert(6 != sharecheck.getStockSymbols().length);
+	}
+
+	public void testInvalidTotalPortfolioValueLower() // Testing the invalid negative input "-1" for Total Portfolio Value
+	{
+		assertFalse("Invalid, Total portfolio value is less than zero",sharecheck.getStockPortfolioTotalValue() < 0);
+	}
+
+	public void testInvalidTotalPortfolioValueUpper()	// Testing the invalid input "25,000,001" for Total Portfolio Value
+	{
+		assertFalse("Invalid, Total portfolio value exceeds 25000000",sharecheck.getStockPortfolioTotalValue() > 25000000);
+	}
+
+	//Our Valid Unit Tests
+	
+	public void testValidTotalShareValueLower() // Testing the input "0" for the valid lower boundary for Total Share Value
+	{
+		for( int i =0; i < 5 ; i++)
+		{
+			assert(0 >= (sharecheck.requestStockPrice(sharecheck.getStockBeans()[i]) * sharecheck.getStockShares()[i])); //Valid, Total Share value = zero
+		}
+	}
+	
+	//(requestStockPrice(stockBeans [i])* stockShares[i])
+
+	public void testValidTotalShareValueUpper() // Testing the input "5,000,000" for the valid upper boundary for Total Share Value
+	{
+		for( int i =0; i < 5 ; i++)
+		{
+			assert(5000000 <= (sharecheck.requestStockPrice(sharecheck.getStockBeans()[i]) * sharecheck.getStockShares()[i])); // total share value = 5,000,000
+		}
+	}
+
+	public void testValidDifferentSharesLower() // Testing the input "0" for the valid lower boundary for Number of Different Shares in Portfolio
+	{
+		assert(0 <= sharecheck.getStockSymbols().length);
+	}
+
+	public void testValidDifferentSharesUpper() // Testing the input "5" for the valid upper boundary for Number of Different Shares in Portfolio
+	{
+		assert(5 >= sharecheck.getStockSymbols().length);
+	}
+
+	public void testValidTotalPortfolioValueLower() // Testing the input "0" for the valid lower boundary for Total Portfolio Value
+	{
+		assert(0 <= sharecheck.getStockPortfolioTotalValue()); 
+		
+	}
+
+	public void testValidTotalPortfolioValueUpper() // Testing the input variable "25,000,000" for the valid upper boundary for Total Portfolio Value
+	{
+		assert(25000000 >= sharecheck.getStockPortfolioTotalValue());
+	
+	
+	}
+
+}

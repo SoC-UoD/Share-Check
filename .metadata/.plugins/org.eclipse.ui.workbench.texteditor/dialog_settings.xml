@@ -2,8 +2,8 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="317" key="DIALOG_WIDTH"/>
-		<item value="217" key="DIALOG_Y_ORIGIN"/>
-		<item value="811" key="DIALOG_X_ORIGIN"/>
+		<item value="180" key="DIALOG_Y_ORIGIN"/>
+		<item value="1277" key="DIALOG_X_ORIGIN"/>
 		<item value="459" key="DIALOG_HEIGHT"/>
 		<item value="1|Segoe UI|8.861539|0|WINDOWS|1|-16|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 	</section>
@@ -13,13 +13,16 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="items" key="selection"/>
+		<item value="Change" key="selection"/>
 		<list key="findhistory">
-			<item value="stockShares"/>
-			<item value="items"/>
-			<item value="big"/>
-			<item value="getstockshares"/>
-			<item value="request"/>
+			<item value="change"/>
+			<item value=".change"/>
+			<item value=".chage"/>
+			<item value="price"/>
+			<item value="requestStockPrice"/>
+			<item value="stockBeans.get"/>
+			<item value="getprice"/>
+			<item value="portfolio"/>
 		</list>
 		<list key="replacehistory">
 		</list>
